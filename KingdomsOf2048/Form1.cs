@@ -37,12 +37,8 @@ namespace KingdomsOf2048
                     int val = kingdoms.GameArea[y * KingdomsOf2048.SIZE + x];
                     if (val != 0)
                     {
-                        int v = (int)(Math.Sqrt(val)*5);
-                        //var b = new SolidBrush(Color.FromArgb(v, v, v));
-                        var b = Brushes.Red;
-                        g.FillRectangle(b, offset.X + TileSize * x, offset.Y + TileSize * y, TileSize, TileSize);
-                        b = new SolidBrush(Color.FromArgb(v, v, 255 - v));
-                        g.DrawString("" + val, SystemFonts.CaptionFont, b, offset.X + TileSize * x, offset.Y + TileSize * y);
+                        g.FillRectangle(Brushes.Red, offset.X + TileSize * x, offset.Y + TileSize * y, TileSize, TileSize);
+                        g.DrawString("" + val, SystemFonts.CaptionFont, Brushes.Blue, offset.X + TileSize * x, offset.Y + TileSize * y);
                     }
                 }
             }
