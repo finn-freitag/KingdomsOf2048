@@ -79,6 +79,7 @@ namespace KingdomsOf2048
                 kingdoms = new KingdomsOf2048();
                 kingdoms.SpawnRandom();
                 Render();
+                moves = 0;
             }
         }
 
